@@ -39,10 +39,8 @@ echo "Configure nginx & php"
     cp /var/conf/php-fpm.conf /etc/php5/fpm/
 
 echo "Configure virtual hosts"
-    rm /etc/nginx/sites-available/ -R
-    rm /etc/nginx/sites-enabled/ -R
-    cp /var/conf/sites-available/ /etc/nginx/sites-available/ -R
-    mkdir /etc/nginx/sites-enabled/
+    chmod +x /var/conf/siteconf.sh
+    /var/conf/siteconf.sh
     chmod +x /var/conf/virtual.sh
     /var/conf/virtual.sh
 
