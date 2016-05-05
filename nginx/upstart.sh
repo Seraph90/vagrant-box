@@ -21,8 +21,8 @@ echo "Installing utilities"
     apt-get install debconf-utils -y > /dev/null 2>&1
 
 echo "Installing MySQL Server"
-	echo "mysql-server mysql-server/root_password password ${DBPASSWD}" | debconf-set-selections
-	echo "mysql-server mysql-server/root_password_again password ${DBPASSWD}" | debconf-set-selections
+    echo "mysql-server mysql-server/root_password password ${DBPASSWD}" | debconf-set-selections
+    echo "mysql-server mysql-server/root_password_again password ${DBPASSWD}" | debconf-set-selections
     apt-get install mysql-server -y > /dev/null 2>&1
 
 # echo "Installing phpMyAdmin"
