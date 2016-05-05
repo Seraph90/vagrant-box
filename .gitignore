@@ -1,5 +1,8 @@
+#PhpStrom
 /.idea
-.vagrant/
-www/
 
-akb/
+#Бокс
+.vagrant/
+
+#Кастомные боксы
+/projects/
