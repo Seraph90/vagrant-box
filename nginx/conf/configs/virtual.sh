@@ -1,6 +1,9 @@
 #!/bin/bash
 
-#TODO Сделать перебор массива сайтов.
 echo "Create symlinks"
-    # rm /etc/nginx/sites-enabled/site.conf
-    # ln -s /etc/nginx/sites-available/site.conf /etc/nginx/sites-enabled/
+
+for file in /var/conf/sites-enabled/*
+do
+	rm /etc/nginx/sites-enabled/${file##*/}
+	ln -s /etc/nginx/sites-available/${file##*/} /etc/nginx/sites-enabled/
+done
