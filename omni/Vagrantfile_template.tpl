@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
     config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 
     config.vm.provision :shell do |shell|
+        shell.args = "{{SERVER}}"
         shell.path = "./upstart.sh"
     end
-
 end

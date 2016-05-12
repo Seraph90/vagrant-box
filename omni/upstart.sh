@@ -42,14 +42,13 @@ echo "Installing phpMyAdmin"
     echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none" | debconf-set-selections
     apt-get install phpMyAdmin -y > /dev/null 2>&1
 fi
+echo "Configure $SERVER & php"
 case $SERVER in
     nginx   ) 
-echo "Configure nginx & php"
     cp /var/conf/php.ini /etc/php5/fpm/
     cp /var/conf/php-fpm.conf /etc/php5/fpm/
 ;;
     apache2 ) 
-echo "Configure apache & php"
     cp /var/conf/php.ini /etc/php5/apache2/
 ;;
 esac

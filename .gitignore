@@ -2,7 +2,7 @@
 /.idea
 
 #Бокс
-.vagrant/
+.vagrant
 
 #Кастомные боксы
-/projects/
+/projects
