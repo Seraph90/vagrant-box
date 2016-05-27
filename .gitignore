@@ -1,0 +1,8 @@
+#PhpStrom
+/.idea
+
+#Бокс
+.vagrant
+
+#Кастомные боксы
+/projects
